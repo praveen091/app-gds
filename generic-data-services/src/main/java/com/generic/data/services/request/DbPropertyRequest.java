@@ -26,7 +26,7 @@ public class DbPropertyRequest {
 	private String maxSize;// optional
 	@ApiModelProperty(value = "timeOut", example = "specify the timeout period  after which an idle connection is removed from the pool.default is 30000 sec", required = false)
 	private String timeOut;// optional
-	@ApiModelProperty(value = "allowFailover", example = "This property controls whether the pool can be suspended and resumed through JMX. This is useful for certain failover automation scenarios.default true", required = false)
+	@ApiModelProperty(value = "allowFailover", example = "This property controls whether the pool can be suspended and resumed through JMX. This is useful for certain failover automation scenarios.default false", required = false)
 	private boolean allowFailover;// optional
 	@ApiModelProperty(value = "readOnly", example = "specify the read-only mode default false ", required = false)
 	private boolean readOnly;// optional

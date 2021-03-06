@@ -11,7 +11,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class QueryRequest {
-	@ApiModelProperty(value = "qyery", example = "select * from employee", required = true)
+	@ApiModelProperty(value = "qyery", example = "sql query", required = true)
 	private String query;
 	@ApiModelProperty(value = "placeHolderValue", example = "{name:xyz},must not null for named query", required = false)
 	private Map<String, Object> queryPlaceHolder;

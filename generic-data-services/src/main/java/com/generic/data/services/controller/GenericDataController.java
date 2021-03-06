@@ -49,7 +49,7 @@ public class GenericDataController {
 	@GetMapping(path = "sql/find")
 	@ApiOperation("Data retrieve  action , status = 1 (success) , status = 3 (error)")
 	public ResponseEntity<GenericDataResponse> findBySQLQuery(
-			@RequestParam("query") @ApiParam(value = "sql query", required = true, name = "query", example = "select * from table") String query,
+			@RequestParam("query") @ApiParam(value = "sql query", required = true, name = "query", example = "sql select query") String query,
 			@RequestParam("queryPlaceHolder") @ApiParam(value = "placeHolderValue", required = false, name = "queryPlaceHolder", example = "{name:xyz}must not null for named query") Map<String, Object> queryPlaceHolder,
 			@RequestHeader(DataServiceFilter.DATA_SOURCE_NAME) String dataSourceName, HttpServletRequest request) {
 		logger.info(
@@ -61,7 +61,7 @@ public class GenericDataController {
 	@GetMapping(path = "sql/find/pagination")
 	@ApiOperation("Data retrieve  action , status = 1 (success) , status = 3 (error)  ")
 	public ResponseEntity<GenericDataResponse> findByPagination(
-			@RequestParam("query") @ApiParam(value = "sql query", required = true, name = "query", example = "select * from table") String query,
+			@RequestParam("query") @ApiParam(value = "sql query", required = true, name = "query", example = "sql select query") String query,
 			@RequestParam("queryPlaceHolder") @ApiParam(value = "placeHolderValue", required = false, name = "queryPlaceHolder", example = "{name:xyz}must not null for named query") Map<String, Object> queryPlaceHolder,
 			@RequestParam("offSet") @ApiParam(value = "offSet", required = true, name = "offSet", example = "10") Integer offSet,
 			@RequestParam("maxSize") @ApiParam(value = "maxSize", required = true, name = "maxSize", example = "20") Integer maxSize,
@@ -77,7 +77,7 @@ public class GenericDataController {
 	@GetMapping(path = "sql/count")
 	@ApiOperation("Data retrieve  action , status = 1 (success) , status = 3 (error)")
 	public ResponseEntity<GenericDataResponse> countBySQLQuery(
-			@RequestParam("query") @ApiParam(value = "sql query", required = true, name = "query", example = "select * from table") String query,
+			@RequestParam("query") @ApiParam(value = "sql query", required = true, name = "query", example = "sql count query") String query,
 			@RequestParam("queryPlaceHolder") @ApiParam(value = "placeHolderValue", required = false, name = "queryPlaceHolder", example = "{name:xyz}must not null for named query") Map<String, Object> queryPlaceHolder,
 			@RequestHeader(DataServiceFilter.DATA_SOURCE_NAME) String dataSourceName, HttpServletRequest request) {
 		logger.info(

@@ -16,7 +16,7 @@ import lombok.ToString;
 @Data
 public class BatchQueryRequest {
 
-	@ApiModelProperty(value = "qyery", example = "select * from employee", required = true)
+	@ApiModelProperty(value = "qyery", example = "sql insert query", required = true)
 	private String query;
 	@ApiModelProperty(value = "placeHolderValue", example = "{name:xyz}", required = true)
 	private List<Map<String, Object>> queryPlaceHolder;
